@@ -17,6 +17,8 @@ body {
     width: 450px;
     height: 670px;
     border-radius: 1em;
+    overflow: hidden; 
+    /* Ngăn không cho khung của text-display bị tràn ra ngoài */
 }
 
 #text-display {
@@ -24,8 +26,13 @@ body {
     height: 120px;
     background-color: #8d828244;
     border: none !important;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    padding-right: 50px;
 }
 
 .button {
