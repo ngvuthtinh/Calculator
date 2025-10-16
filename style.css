@@ -56,6 +56,7 @@ button {
 
 .btn {
     background-color: #505050;
+    transition: transform 0.08s ease-in-out;
 }
 
 .operator {
@@ -64,9 +65,35 @@ button {
 
 .btn:hover{
     filter: brightness(115%);
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   filter: brightness(90%);
   transform: scale(0.95);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+}
+img{
+    mix-blend-mode: multiply;
+}
+img {
+    width: 50px !important;
+    height: 500px !important;
+    object-fit: contain !important;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+    text-decoration: underline;
 }
