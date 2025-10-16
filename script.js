@@ -49,7 +49,7 @@ function inputDecimal(state) {
 }
 
 function setOperator(state, operator) {
-    if (state.op && state.previousValue !== null && !state.overwrite) {
+    if (state.operator && state.previousValue !== null && !state.overwrite) {
         evaluate(state);
     }
 
@@ -77,14 +77,14 @@ function evaluate(state) {
         case '/':
             if (b === 0) {
                 state.display_text = "Error";
-                clearAll(state);
-                return;
+                return 0;
             }
             result = a / b;
             break;
     }
 
-    state.currentInput = String(result);
+    const roundedResult = parseFloat(result.toFixed(10));
+    state.currentInput = String(roundedResult);
     state.display_text = state.currentInput;
     state.previousValue = null;
     state.operator = null
